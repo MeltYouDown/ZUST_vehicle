@@ -11,23 +11,21 @@ const app = new Vue({
 			return (x >= 0 && x < 10) ? "0" + x : x
 		},
 		updateTime() {
-			var myDate = new Date();
+			const myDate = new Date();
 			
-			const year = this.format(myDate.getFullYear());
-			const month = this.format(myDate.getMonth() + 1);
-			const dateInMonth = this.format(myDate.getDate());
+			const year = parseInt(this.format(myDate.getFullYear()));
+			const month = parseInt(this.format(myDate.getMonth() + 1));
+			const dateInMonth = parseInt(this.format(myDate.getDate()));
 			
 			this.date = year + "-" + month + "-" + dateInMonth;
 			this.tomorrow = year + "-" + month + "-" + (dateInMonth + 1);
 			this.time = this.format(myDate.getHours()) + ":" + this.format(myDate.getMinutes()) + ":" + this.format(myDate.getSeconds());
-			;
-			
 		},
 		getParam() {
 			const url = location.search; //获取url中"?"符后的字串
 			
 			if (url.indexOf("?") !== -1) {
-				const str = url.substr(1);
+				const str = url.substring(1);
 				const strs = str.split("&");
 				this.name = decodeURIComponent(strs[0].replace("name=", ""));
 				

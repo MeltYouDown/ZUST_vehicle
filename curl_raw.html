@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" name="viewport">
+    <link href="favicon.ico" rel="icon">
+    <title>校外人员入校审核</title>
+    <style>html, body {
+        margin: 0;
+        padding: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }</style>
+    <style>.loading {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        font-size: 13px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .loading-tips {
+        height: 20px;
+        line-height: 20px;
+        color: #3a3a3a;
+    }
+
+    .loading-container {
+        width: 100px;
+        height: 100px;
+        animation: rotate-move 2s ease-in-out infinite;
+    }
+
+    .loading-container-dot {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background-color: #000;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .dot-3 {
+        background-color: #f74d75;
+        animation: dot-3-move 2s ease infinite;
+    }
+
+    .dot-2 {
+        background-color: #10beae;
+        animation: dot-2-move 2s ease infinite;
+    }
+
+    .dot-1 {
+        background-color: #ffe386;
+        animation: dot-1-move 2s ease infinite;
+    }
+
+    @keyframes dot-3-move {
+        20% {
+            transform: scale(1)
+        }
+
+        45% {
+            transform: translateY(-5px) scale(.6)
+        }
+
+        60% {
+            transform: translateY(-20px) scale(.6)
+        }
+
+        80% {
+            transform: translateY(-20px) scale(.6)
+        }
+
+        100% {
+            transform: translateY(0px) scale(1)
+        }
+    }
+
+    @keyframes dot-2-move {
+        20% {
+            transform: scale(1)
+        }
+
+        45% {
+            transform: translate(-4px, 3px) scale(.6)
+        }
+
+        60% {
+            transform: translate(-20px, 15px) scale(.6)
+        }
+
+        80% {
+            transform: translate(-20px, 15px) scale(.6)
+        }
+
+        100% {
+            transform: translateY(0px) scale(1)
+        }
+    }
+
+    @keyframes dot-1-move {
+        20% {
+            transform: scale(1)
+        }
+
+        45% {
+            transform: translate(4px, 3px) scale(.6)
+        }
+
+        60% {
+            transform: translate(20px, 15px) scale(.6)
+        }
+
+        80% {
+            transform: translate(20px, 15px) scale(.6)
+        }
+
+        100% {
+            transform: translateY(0px) scale(1)
+        }
+    }
+
+    @keyframes rotate-move {
+        55% {
+            transform: rotate(0deg)
+        }
+
+        80% {
+            transform: rotate(360deg)
+        }
+
+        100% {
+            transform: rotate(360deg)
+        }
+    }</style>
+    <link href="css/chunk-03d5b17e.69b7890e.css" rel="prefetch">
+    <link href="css/chunk-09ff8bcf.b7b426ac.css" rel="prefetch">
+    <link href="css/chunk-1243ff34.624fee34.css" rel="prefetch">
+    <link href="css/chunk-15231a54.624fee34.css" rel="prefetch">
+    <link href="css/chunk-26937ed4.4b713240.css" rel="prefetch">
+    <link href="css/chunk-300e725c.944af6a2.css" rel="prefetch">
+    <link href="css/chunk-3728d716.455aa59a.css" rel="prefetch">
+    <link href="css/chunk-4ac37d5a.5f401d35.css" rel="prefetch">
+    <link href="css/chunk-4d1974da.c70f0eba.css" rel="prefetch">
+    <link href="css/chunk-551daadc.e4c03d0e.css" rel="prefetch">
+    <link href="css/chunk-6ce0463c.684f8aa1.css" rel="prefetch">
+    <link href="css/chunk-7e158dae.624fee34.css" rel="prefetch">
+    <link href="css/chunk-b25c2ba6.23c45673.css" rel="prefetch">
+    <link href="js/chunk-03d5b17e.866081c6.js" rel="prefetch">
+    <link href="js/chunk-09ff8bcf.e2f7e2d2.js" rel="prefetch">
+    <link href="js/chunk-1243ff34.a8139a12.js" rel="prefetch">
+    <link href="js/chunk-15231a54.9d3f018c.js" rel="prefetch">
+    <link href="js/chunk-26937ed4.194dfea2.js" rel="prefetch">
+    <link href="js/chunk-26b05676.0d1198c1.js" rel="prefetch">
+    <link href="js/chunk-2d0b2ecb.1abd02a2.js" rel="prefetch">
+    <link href="js/chunk-300e725c.e4500f71.js" rel="prefetch">
+    <link href="js/chunk-364cf210.f35dda17.js" rel="prefetch">
+    <link href="js/chunk-3728d716.514632e3.js" rel="prefetch">
+    <link href="js/chunk-4ac37d5a.c7d48d7c.js" rel="prefetch">
+    <link href="js/chunk-4bdf2c4e.91b4919d.js" rel="prefetch">
+    <link href="js/chunk-4d1974da.c70ddeb7.js" rel="prefetch">
+    <link href="js/chunk-551daadc.36093c5f.js" rel="prefetch">
+    <link href="js/chunk-6ce0463c.b1d328db.js" rel="prefetch">
+    <link href="js/chunk-7e158dae.fc55f776.js" rel="prefetch">
+    <link href="js/chunk-b25c2ba6.66e7fd11.js" rel="prefetch">
+    <link href="css/app.106ce053.css" rel="preload" as="style">
+    <link href="css/chunk-vendors.eda94bcc.css" rel="preload" as="style">
+    <link href="js/app.5ee9deff.js" rel="preload" as="script">
+    <link href="js/chunk-vendors.335d9dbf.js" rel="preload" as="script">
+    <link href="css/chunk-vendors.eda94bcc.css" rel="stylesheet">
+    <link href="css/app.106ce053.css" rel="stylesheet">
+</head>
+<body>
+<noscript><strong>We're sorry but faqi doesn't work properly without JavaScript enabled. Please enable it to
+    continue.</strong></noscript>
+<div id="app"></div>
+<script src="./loading/loading.js"></script>
+<script src="js/chunk-vendors.335d9dbf.js"></script>
+<script src="js/app.5ee9deff.js"></script>
+</body>
+</html>
