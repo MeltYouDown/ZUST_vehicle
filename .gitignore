@@ -19,4 +19,10 @@ tmp/
 # Compile generated files
 output/
 
+# Replit specific files
+.replit
+replit.nix
+.cache/
+.config/
+
 # Project specific git ignore files
